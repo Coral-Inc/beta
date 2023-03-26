@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slacker Countdown</title>
+<link rel="shortcut icon" href="/v.0.1.4/Pic/Copy of Coral Adalo Logo - Made with PosterMyWall.png" type="image/x-icon">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+html {
+    background-color: aqua;
+}
+.box {
+    background-color: gray;
+    border: 5px solid red;
+    border-radius: 20px;
+    width: 500px;
+    margin-left: 700px;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Times New Roman', Times, serif;
+}
+</style>
+</head>
+<h1>Slacker Web Release:</h1>
+<body>
+
+<p id="demo">Countdown...</p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 10, 2023 20:30:0").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<div class="box">
+<img src="/v.0.1.4/Pic/announcement png.png" style="float: left; width: 75px;"><h2 style="padding-right: 15%;">News</h2>
+<hr>
+<h3>Slacker badges</h3>
+<h4>Slacker is a chatting app so it will be like every other chatting apps.
+   It will add badges to the app on users, servers and groups.
+</h4>
+<hr>
+<h3>Slacker Development</h3>
+<h4>Slacker is currently being developed by one only. Soon a whole team will
+    join to assist the development so we can give it out to you all.
+</h4>
+<hr>
+</div>
+<div class="box">
+<img src="/v.0.1.4/Pic/info png.png" style="float: left; width: 75px;"><h2 style="padding-right: 15%;">Updates/Info</h2>
+<hr>
+<h3>Countdown to...</h3>
+<h4>The current countdown you are seeing is to June 10th, 2023, 20:30:00.
+    Why this date? Thats the big day Slacker is expected to be launched.
+    But for now only the web is opening that day.
+</h4>
+<hr>
+</div>
+</body>
+</html>
